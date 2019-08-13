@@ -24,6 +24,7 @@ public class FarmSimulation {
 				animal.age();
 				//if animal age reaches lifespan, the animal dies
 				if(animal.getAge() == animal.getLifespan()) {
+					farm.setTotalMoney(farm.getTotalMoney() + animal.lifetimeProfit());
 					animalItr.remove();
 				}
 			}
